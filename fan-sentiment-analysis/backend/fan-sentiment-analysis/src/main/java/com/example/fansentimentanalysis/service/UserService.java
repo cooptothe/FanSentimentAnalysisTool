@@ -31,7 +31,7 @@ public class UserService {
         if (userOptional.isPresent()) {
             User user = userOptional.get();
             user.setUsername(userDetails.getUsername());
-            user.setPasswordHash(userDetails.getPasswordHash());
+            user.setPassword(userDetails.getPassword());
             user.setEmail(userDetails.getEmail());
             user.setRole(userDetails.getRole());
             return userRepository.save(user);
